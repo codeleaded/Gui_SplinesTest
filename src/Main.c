@@ -54,12 +54,11 @@ void Update(AlxWindow* w){
 
     //for(float t = 0.0f;t<(float)path.points.size-3.0f;t+=0.005f){
     //    Vec2 pos = CRSpline_Point(&path,t,FALSE);
-    //    Draw(pos.x,pos.y,WHITE);
+    //    Point_Render(WINDOW_STD_ARGS,pos,WHITE);
     //}
 
-    CRSpline_Render(&path,RED,1);
-
-    BCurve_Render(curve,BLUE);
+    CRSpline_Render(WINDOW_STD_ARGS,&path,RED,1);
+    BCurve_Render(WINDOW_STD_ARGS,curve,BLUE);
 
     if(pSelected){
         RenderRect(pSelected->x-1,pSelected->y-1,3,3,YELLOW);
